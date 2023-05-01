@@ -1,4 +1,4 @@
-﻿namespace JarPControlProject.PCController.Command;
+namespace JarPControlProject.PCController.Command;
 
 public class CommandResult<T>
 
