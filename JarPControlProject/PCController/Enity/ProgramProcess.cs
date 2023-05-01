@@ -39,7 +39,11 @@ public class ProgramProcess
     public bool SearchPrograms(String programName)
     {
         name = GetRunningPrograms();
-        if (name.ContainsValue(programName))
+        
+        // if (name.ContainsValue(programName))
+        //     return true;
+        
+        if(name.Any(item => item.Value == programName))
             return true;
 
         return false;

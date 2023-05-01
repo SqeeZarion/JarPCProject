@@ -65,8 +65,7 @@ public class UserRepository
                         UserTypeRole userTypeRole = (UserTypeRole)Enum.Parse(typeof(UserTypeRole),
                             reader.GetString(reader.GetOrdinal("UserTypeRole")));
 
-                        UserAccount account =
-                            new UserAccount(userId, email, password, userName, new[] { userTypeRole });
+                        UserAccount account = new UserAccount(userId, email, password, userName, new[] { userTypeRole });
                         accounts.Add(account);
                     }
                 }

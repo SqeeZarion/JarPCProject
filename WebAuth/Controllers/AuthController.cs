@@ -1,5 +1,8 @@
 ﻿using JarPControlProject.Database;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Telegram.Bot.Types;
+using WebAuthCommon;
 
 namespace WebApplication3.Controllers;
 
@@ -11,6 +14,12 @@ namespace WebApplication3.Controllers;
 public class AuthController : Controller
 {
 
+    private readonly IOptions<AuthOption> authOptions;
+    public AuthController(IOptions<AuthOption> authOptions )
+    {
+        this.authOptions = authOptions;
+    }
+    
     [Route("login")] // вказує на шлях URL-адреси, за яким клієнт може зробити HTTP-запит до сервера.
     [HttpPost]
     
@@ -30,4 +39,8 @@ public class AuthController : Controller
     }
     
     
+    //токен для авторизованого користувача
+
+    private string GenerateJWT(){}
+
 }

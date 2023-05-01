@@ -8,12 +8,15 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Fligoo.Framework.Base.Api" Version="3.0.1" />
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.30.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\JarPControlProject\JarPControlProject.csproj" />
+      <ProjectReference Include="..\WebAuthCommon\WebAuthCommon.csproj" />
     </ItemGroup>
 
 </Project>
