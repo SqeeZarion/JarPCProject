@@ -41,6 +41,6 @@ public class AuthController : Controller
     
     //токен для авторизованого користувача
 
-    private string GenerateJWT(){}
+    //private string GenerateJWT(){}
 
 }
