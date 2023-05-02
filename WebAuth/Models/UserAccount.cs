@@ -30,3 +30,4 @@ public enum UserTypeRole
     User,
     Admin
 }
+

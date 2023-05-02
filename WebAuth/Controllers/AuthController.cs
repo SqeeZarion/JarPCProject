@@ -1,6 +1,9 @@
-﻿using JarPControlProject.Database;
+﻿using System.Security.Claims;
+using JarPControlProject.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.JsonWebTokens;
+using Microsoft.IdentityModel.Tokens;
 using Telegram.Bot.Types;
 using WebAuthCommon;
 
@@ -41,6 +44,20 @@ public class AuthController : Controller
     
     //токен для авторизованого користувача
 
-    //private string GenerateJWT(){}
+    // private string GenerateJWT(UserAccount user)
+    // {
+    //     var authParams = authOptions.Value;
+    //     var securityKey = authParams.GetSymmetricSecurityKey();
+    //     
+    //     //облікові дані
+    //     var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+    //
+    //     var claims = new List<Claim>()
+    //     {
+    //         new Claim(JwtRegisteredClaimNames.Email, user.Email),
+    //     };
+    //
+    //
+    // }
 
 }

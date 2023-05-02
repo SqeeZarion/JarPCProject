@@ -30,16 +30,15 @@ public class CloseProgram :ComInterfaceOC
 
                 ProgramProcess.Name.Remove(ProgramProcess.Name.FirstOrDefault(x => x.Value == programName).Key);
 
-                result = new CommandResult<String>("Succeed!", "Program " + programName + " closed successfully.",
-                    true);
+                Console.WriteLine("Succeed!"+ "Program " + programName + " closed successfully.", true);
             }
             catch (Exception e)
             {
-                result = new CommandResult<String>("Failed!", "Failed to close program. Error: " + e.Message, false);
+                Console.WriteLine("Failed!" + "Failed to close program. Error: " + e.Message, false);
             }
         }
         else
-            result = new CommandResult<String>("Failed!", "Program " + programName + " is not open.", false);
+            Console.WriteLine("Failed!"+ "Program " + programName + " is not open.", false);
 
         return result;
     }

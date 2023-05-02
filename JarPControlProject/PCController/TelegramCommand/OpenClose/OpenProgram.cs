@@ -23,28 +23,24 @@ public class OpenProgram : ComInterfaceOC
         {
             try
             {
-                string path = @"D:\Program Files (x86)\Telegram Desktop\";
-                string?[] files =
-                    Directory.GetFiles(path, programName + ".exe",
-                        SearchOption.AllDirectories); // пошук всіх відповідних файлів
-                string? fullPath = (files.Length > 0) ? files[0] : null;
-                
-                if (!string.IsNullOrEmpty(fullPath))
+                if (!string.IsNullOrEmpty(programName))
                 {
-                    // Open the program
+                    string[] files = Directory.GetFiles(@"D:\Program Files (x86)", programName+".exe", SearchOption.AllDirectories);
 
-                    Process.Start(fullPath);
-                    ProgramProcess.Name.Add(Process.GetProcesses().Length - 1, programName);
+                    if (files.Length > 0)
+                    {
+                        Process.Start(files[0]);
+                        ProgramProcess.Name.Add(Process.GetProcesses().Length - 1, programName);
 
-                    result = new CommandResult<String>("Succeed!", "Program" + programName + "opened successfully.!",
-                        true);
+                        result = new CommandResult<String>("Succeed!", "Program" + programName + "opened successfully.!", true);
+                    }
                 }
 
                 return null!;
             }
             catch (Exception e)
             {
-                result = new CommandResult<String>("Failed!", "Failed to open program. Error: " + e.Message, false);
+                Console.WriteLine("Failed!" + e.Message, false);
             }
         }
         else

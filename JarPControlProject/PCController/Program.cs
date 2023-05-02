@@ -12,9 +12,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        InvokerOpenClose doer;
-        PCControl pccontrol = new PCControl("SqeeZes");
-         TelegramBot bot = new TelegramBot("5697150776:AAFZilQrfm3LEOIUfNl4yDcKgWbnRBfCx44");
+         InvokerOpenClose doer;
+        // PCControl pccontrol = new PCControl("SqeeZes");
+        //  TelegramBot bot = new TelegramBot("5697150776:AAFZilQrfm3LEOIUfNl4yDcKgWbnRBfCx44");
         
         //OpenProgram method
         
@@ -31,28 +31,19 @@ class Program
         doer = new InvokerOpenClose(close);
         
         doer.doSmth();
-
-        while (true)
-        {
-            try
-            {
-                bot.GetMessage().Wait();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Eror:" + e);
-                throw;
-            }
-        }
         
-        // try {
-        //     using (SqlConnection conn =  DBConnection.GetConnection()) {
-        //         conn.Open();
-        //         Console.WriteLine("Підключення до бази даних встановлено успішно.");
-        //         // Ваш код для взаємодії з базою даних
+        // while (true)
+        // {
+        //     try
+        //     {
+        //         bot.GetMessage().Wait();
         //     }
-        // } catch (Exception ex) {
-        //     Console.WriteLine("Помилка при підключенні до бази даних: " + ex.Message);
+        //     catch (Exception e)
+        //     {
+        //         Console.WriteLine("Eror:" + e);
+        //         throw;
+        //     }
         // }
+        
     }
 }
