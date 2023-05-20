@@ -7,10 +7,7 @@ public class OpenProgram : ComInterfaceOC
 {
     private CommandResult<String> result;
     private ProgramProcess pcControl;
-
-    private readonly RegistryKey key =
-        Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths");
-
+    
     public OpenProgram()
     {
         pcControl = new ProgramProcess();

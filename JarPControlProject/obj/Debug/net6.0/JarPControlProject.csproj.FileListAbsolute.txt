@@ -37,3 +37,8 @@ D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\ne
 D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
+D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\SB.ChatBotManagment.dll
+D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\SB.Tools.Classes.dll
+D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\System.IO.Packaging.dll
+D:\Program Files (x86)\.rider\JarPControlProject\JarPControlProject\bin\Debug\net6.0\fa-IR\SB.Tools.Classes.resources.dll

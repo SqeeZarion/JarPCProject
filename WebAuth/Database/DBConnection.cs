@@ -1,22 +1,23 @@
-﻿namespace JarPControlProject.Database;
-using System.Data.SqlClient;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApplication3.Models;
+
+namespace JarPControlProject.Database;
 
 using System.Data.SqlClient;
 
-public static class DBConnection 
+
+public class DBConnection : DbContext
 {
-    
-    private const string SERVER_NAME = "SQEEZES\\MSSQLSERVER1";
-        private const string DATABASE_NAME = "JarPCProject";
-        private const string USER_ID = "SqeeZarion";
-        private const string PASSWORD = "mopsik_tawerka09";
-        
-        private const string CONNECTION_STRING = "Data Source=" + SERVER_NAME + ";Initial Catalog=" + DATABASE_NAME + ";User ID=" + USER_ID + ";Password=" + PASSWORD;
 
+    public DBConnection(DbContextOptions<DBConnection> options) : base(options)
+    {
         
-        public static SqlConnection GetConnection() 
-        {
-            SqlConnection conn = new SqlConnection(CONNECTION_STRING);
-            return conn;
-        }
+    }
+    
+    public DbSet<UserAccount> Users { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<UserAccount>().ToTable("Users");
+    }
 }
